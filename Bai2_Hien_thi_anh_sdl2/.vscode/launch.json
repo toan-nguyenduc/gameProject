@@ -8,10 +8,10 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "e:/Uet/Năm 1/Lập trình nâng cao/gameProject/gameProject/Bai2_Hien_thi_anh_sdl2",
-      "program": "e:/Uet/Năm 1/Lập trình nâng cao/gameProject/gameProject/Bai2_Hien_thi_anh_sdl2/build/Debug/outDebug",
+      "cwd": "e:/VS code/Fix_SDL",
+      "program": "e:/VS code/Fix_SDL/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
