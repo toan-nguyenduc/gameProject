@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1710265088 source:c:\users\thant\onedrive\desktop\physics 2d platformer sdl\tachfile\windown.cpp
+
+1710265088 source:c:\users\thant\onedrive\desktop\physics 2d platformer sdl\tachfile\defs.h
+
+1710266367 source:c:\users\thant\onedrive\desktop\physics 2d platformer sdl\tachfile\main.cpp
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	"windown.h"
+	"graphics.h"
+
+1710265088 c:\users\thant\onedrive\desktop\physics 2d platformer sdl\tachfile\defs.h
+
+1710267203 c:\users\thant\onedrive\desktop\physics 2d platformer sdl\tachfile\windown.h
+
+1710266136 c:\users\thant\onedrive\desktop\physics 2d platformer sdl\tachfile\graphics.h
+	<SDL.h>
+	<SDL_image.h>
+	"windown.h"
+
