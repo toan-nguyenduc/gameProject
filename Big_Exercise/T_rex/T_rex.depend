@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1714412723 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphic\graphics.cpp
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	"Graphics.h"
+
+1714412723 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphic\graphics.h
+	"Screen_infor.h"
+	<vector>
+
+1714576982 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphic\screen_infor.h
+	<iostream>
+	<string>
+	<sstream>
+	<fstream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1714643453 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\main.cpp
+	"Screen_infor.h"
+	"Graphics.h"
+	"player.h"
+
+1714183956 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\mouse_keyboard_event\mouse_keyboard_event.cpp
+	"Mouse_Keyboard_event.h"
+
+1714183209 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\mouse_keyboard_event\mouse_keyboard_event.h
+
+1714643327 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\player\player.cpp
+	"player.h"
+
+1714643608 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\player\player.h
+	"Graphics.h"
+	<cmath>
+
+1714373486 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\texture\texture.h
+	"Screen_infor.h"
+
+1714643159 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\timer\timer.cpp
+	"Timer.h"
+	"Screen_infor.h"
+
+1714577228 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\timer\timer.h
+
