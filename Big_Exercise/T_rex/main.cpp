@@ -1,35 +1,46 @@
-#include "Screen_infor.h"
-#include "Graphics.h"
-#include "player.h"
+#include<iostream>
+
+#include "General.h"
+#include "LTexture.h"
+#include "Background.h"
+#include "Sprite.h"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
+    //DO hoa
     Graphics graphics;
     graphics.init();
-    SDL_Texture* background=graphics.loadTexture("image/background1.jpg");
 
-    Player dino;
-    dino.init(graphics);
-    Uint32 lastTime = SDL_GetTicks();
+    SDL_Texture* background=graphics.loadTexture(background_image);
 
-    bool quit=true;
-    while(quit){
-        SDL_Event e;
-        while(SDL_PollEvent(&e) != 0){
-            if(e.key.keysym.sym == SDLK_TAB) quit=false;
+    //Background troi
+    ScrollingBackground bgr;
+    bgr.setTexture(graphics.loadTexture(ground_image));
+
+    //Nhan vat chuyen dong
+    Sprite dino;
+    dino.init(graphics,DINO_FRAMES,DINO_CLIPS);
+
+    bool quitGame = false;
+    SDL_Event event;
+    while(!quitGame){
+        while(SDL_PollEvent(&event) != 0){
+            if(event.key.keysym.sym == SDLK_TAB) quitGame=true;
         }
-        dino.move();
-       // dino.update((SDL_GetTicks()-lastTime)/1000);
         graphics.prepareScene(background);
-        dino.render(graphics);
+        dino.tick();
+        bgr.scroll(5);
+        bgr.render(bgr, graphics);
+        dino.renderSprite(graphics);
         graphics.presentScene();
-    lastTime=SDL_GetTicks();
+		SDL_Delay(20);
     }
 
+    SDL_DestroyTexture(bgr.texture);
 
+    SDL_Delay(100);
     graphics.quit();
-    return 0;
 
 }

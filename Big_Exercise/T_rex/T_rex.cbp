@@ -21,6 +21,8 @@
 					<Add directory="Texture" />
 					<Add directory="player" />
 					<Add directory="Timer" />
+					<Add directory="Graphics" />
+					<Add directory="Sprite" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -38,6 +40,8 @@
 					<Add directory="Texture" />
 					<Add directory="player" />
 					<Add directory="Timer" />
+					<Add directory="Graphics" />
+					<Add directory="Sprite" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -48,14 +52,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Entity/Entity.h" />
-		<Unit filename="Graphic/Graphics.cpp" />
-		<Unit filename="Graphic/Graphics.h" />
-		<Unit filename="Graphic/Screen_infor.h" />
-		<Unit filename="Timer/Timer.cpp" />
-		<Unit filename="Timer/Timer.h" />
+		<Unit filename="Background/Background.h" />
+		<Unit filename="Graphics/General.h" />
+		<Unit filename="Graphics/LTexture.h" />
+		<Unit filename="Sprite/Sprite.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="player/player.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
