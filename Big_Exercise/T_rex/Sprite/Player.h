@@ -1,17 +1,17 @@
-#ifndef SPRITE_H
-#define SPRITE_H
+#ifndef PLAYER_H
+#define PLAYER_H
 
 #include<vector>
 #include "General.h"
 #include "LTexture.h"
 
 
-struct Sprite {
+struct Player {
     SDL_Texture* texture;
     std::vector<SDL_Rect> clips;
 
     int currentFrame = 0;
-    int animationSpeed = 80;
+    int animationSpeed = dinoSpeed;
     int x=100;
     int y=500;
     int highJump=200;
@@ -19,15 +19,15 @@ struct Sprite {
     bool isJumping = false;
     bool inAir = false;
 
-    void init(Graphics graphics, int frames, const int _clips [][4]) {
+    void init(Graphics graphics) {
         texture = graphics.loadTexture(dino_image);
 
         SDL_Rect clip;
-        for (int i = 0; i < frames; i++) {
-            clip.x = _clips[i][0];
-            clip.y = _clips[i][1];
-            clip.w = _clips[i][2];
-            clip.h = _clips[i][3];
+        for (int i = 0; i < DINO_FRAMES; i++) {
+            clip.x = DINO_CLIPS[i][0];
+            clip.y = DINO_CLIPS[i][1];
+            clip.w = DINO_CLIPS[i][2];
+            clip.h = DINO_CLIPS[i][3];
             clips.push_back(clip);
         }
     }
@@ -67,8 +67,8 @@ struct Sprite {
     const SDL_Rect* getCurrentClip() const {
         return &(clips[currentFrame]);
     }
-
-    void renderSprite(Graphics graphics) {
+    //Ham ve dino
+    void render(Graphics graphics) {
         const SDL_Rect* clip = getCurrentClip();
         if(inAir==true){
             y-=20;
@@ -81,6 +81,10 @@ struct Sprite {
         SDL_Rect renderQuad = {x, y, clip->w, clip->h};
         SDL_RenderCopy(graphics.renderer,texture, clip, &renderQuad);
     }
+    //Ham huy
+    void free(){
+        SDL_DestroyTexture(texture);
+    }
 };
 
-#endif // SPRITE_H
+#endif // PLAYER_H

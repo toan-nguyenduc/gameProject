@@ -17,12 +17,14 @@
 	<SDL_mixer.h>
 	<SDL_ttf.h>
 
-1715093918 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\main.cpp
+1715252105 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\main.cpp
 	<iostream>
 	"General.h"
 	"LTexture.h"
 	"Background.h"
-	"Sprite.h"
+	"Player.h"
+	"Enemy.h"
+	"Entity.h"
 
 1714183956 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\mouse_keyboard_event\mouse_keyboard_event.cpp
 	"Mouse_Keyboard_event.h"
@@ -45,20 +47,41 @@
 
 1714577228 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\timer\timer.h
 
-1715075962 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphics\general.h
+1715252176 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphics\general.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
 	<SDL_ttf.h>
 
-1715093888 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphics\ltexture.h
+1715225450 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphics\ltexture.h
 	"General.h"
+	"Exception.h"
 
 1714840427 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\background\background.h
 	"LTexture.h"
 
-1715095990 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sprite\sprite.h
+1715156683 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sprite\sprite.h
 	<vector>
 	"General.h"
 	"LTexture.h"
+
+1715195795 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sprite\player.h
+	<vector>
+	"General.h"
+	"LTexture.h"
+
+1715224344 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sprite\enemy.h
+	"General.h"
+	"LTexture.h"
+
+1715193625 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\entity\entity.h
+	"Player.h"
+	"Enemy.h"
+	"SDL.h"
+
+1715196330 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\exception\exception.h
+	"SDL.h"
+
+1715225448 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sfx\music.h
+	"General.h"
 
