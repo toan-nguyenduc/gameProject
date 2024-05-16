@@ -23,5 +23,15 @@ Lấy cảm hứng từ trò chơi *Chrom Dino* của Google khi người dùng 
 * 	![right](https://github.com/toan-nguyenduc/gameProject/assets/141890836/c46276b9-cd0d-4681-87b9-c23094b5a4cf)
 
 - Bật/tắt tiếng: phím M
+- Restart: phím R
+- Exit: phím ESC
 ##	**4. Cách game hoạt động**
-
+- Vì muốn giữ nguyên bản như game gốc nên game đã được tối ưu hóa hết các thao tác bằng bàn phím.
+- Game sẽ tính điểm theo thời gian người chơi tồn tại được
+- Game sẽ có một quái Enemy được spawn ngẫu nhiên, một quả cầu lửa sẽ đi từ hai phía và người chơi sẽ phải tránh va chạm với hai vật thể đó, nếu chạm phải thì game over.
+- Thời gian tăng thì quái sẽ chạy nhanh hơn để tăng độ khó
+## **5. Tổng kết**
+- Do những điều trên, em mong muốn game của mình được chấm trong ngưỡng từ 7đ - 8đ.
+## **6. Hạn chế**
+- Do chương trình còn hơi cồng kềnh nên việc tạo hiển thị High score đã được lược bớt vì không rõ lí do lỗi.
+- Chưa tìm được nguyên nhân gây thất thoát 0,2mb ram mỗi lần restart game mặc dù đã giải phóng tất cả các hàm, texture cũng như gán thành nullptr.
