@@ -25,6 +25,8 @@
 					<Add directory="Sprite" />
 					<Add directory="SFX" />
 					<Add directory="Exception" />
+					<Add directory="Font" />
+					<Add directory="GamePlay" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -46,6 +48,8 @@
 					<Add directory="Sprite" />
 					<Add directory="SFX" />
 					<Add directory="Exception" />
+					<Add directory="Font" />
+					<Add directory="GamePlay" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -58,10 +62,13 @@
 		</Compiler>
 		<Unit filename="Background/Background.h" />
 		<Unit filename="Entity/Entity.h" />
+		<Unit filename="Font/Font.h" />
+		<Unit filename="GamePlay/Gameplay.h" />
 		<Unit filename="Graphics/General.h" />
 		<Unit filename="Graphics/LTexture.h" />
 		<Unit filename="SFX/Music.h" />
 		<Unit filename="Sprite/Enemy.h" />
+		<Unit filename="Sprite/Fireball.h" />
 		<Unit filename="Sprite/Player.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

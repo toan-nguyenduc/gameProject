@@ -17,14 +17,14 @@
 	<SDL_mixer.h>
 	<SDL_ttf.h>
 
-1715252105 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\main.cpp
+1715923440 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\main.cpp
 	<iostream>
+	<ctime>
 	"General.h"
 	"LTexture.h"
 	"Background.h"
-	"Player.h"
-	"Enemy.h"
-	"Entity.h"
+	"Music.h"
+	"Gameplay.h"
 
 1714183956 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\mouse_keyboard_event\mouse_keyboard_event.cpp
 	"Mouse_Keyboard_event.h"
@@ -47,41 +47,66 @@
 
 1714577228 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\timer\timer.h
 
-1715252176 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphics\general.h
+1715923320 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphics\general.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
 	<SDL_ttf.h>
 
-1715225450 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphics\ltexture.h
+1715881732 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphics\ltexture.h
 	"General.h"
-	"Exception.h"
 
-1714840427 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\background\background.h
+1715819709 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\background\background.h
 	"LTexture.h"
+	<vector>
 
 1715156683 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sprite\sprite.h
 	<vector>
 	"General.h"
 	"LTexture.h"
 
-1715195795 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sprite\player.h
+1715819709 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sprite\player.h
 	<vector>
 	"General.h"
 	"LTexture.h"
 
-1715224344 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sprite\enemy.h
+1715819709 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sprite\enemy.h
 	"General.h"
 	"LTexture.h"
 
-1715193625 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\entity\entity.h
+1715880756 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\entity\entity.h
 	"Player.h"
 	"Enemy.h"
+	"Fireball.h"
 	"SDL.h"
 
 1715196330 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\exception\exception.h
 	"SDL.h"
 
-1715225448 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sfx\music.h
+1715794778 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sfx\music.h
+	<SDL.h>
+	<SDL_mixer.h>
+	<iostream>
+
+1715890563 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\font\font.h
 	"General.h"
+	"LTexture.h"
+	"string"
+
+1715921800 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\gameplay\gameplay.h
+	"General.h"
+	"LTexture.h"
+	"Font.h"
+	"Background.h"
+	"Player.h"
+	"Enemy.h"
+	"Fireball.h"
+	"Entity.h"
+	"Music.h"
+	"Entity.h"
+	<string>
+	<iostream>
+
+1715881068 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\sprite\fireball.h
+	"LTexture.h"
 

@@ -1,25 +1,41 @@
 #ifndef GENERAL_H
 #define GENERAL_H
 
-//Header SDL2
+//HEADER SDL2
 #include<SDL.h>
 #include<SDL_image.h>
 #include<SDL_mixer.h>
 #include<SDL_ttf.h>
 
-//Screen Infor
+//SCREEN INFORMATION
 const int SCREEN_WIDTH = 1600;
 const int SCREEN_HEIGHT =900;
+//CONDITION
+bool outIntro=false;
+bool outPLaying=false;
+bool outEnding=false;
+int score=-1;
+int vel=10;
 #define WINDOW_TITLE "Dino Running"
 
-//Image ground and background
+//IMAGE INTRO
+#define intro_image "image/button3.png"
+#define menu_image "image/menu.png"
+const int INTRO_CLIPS[][4] = {
+    {0, 0, 450, 450},
+    {450, 0, 450, 450}};
+const int INTRO_FRAMES = sizeof(INTRO_CLIPS)/sizeof(int)/4;
+
+//IMAGE OUTRO
+#define outro1_image "image/outro1.png"
+
+//IMAGE GROUND AND BACKGROUND
 #define background_image "image/background.png"
 #define ground_image "image/ground1.png"
-#define bgrSpeed 5
 
-//Image dino run
+//IMAGE DINO RUN
 #define dino_image "image/dino.png"
-#define dinoSpeed 80
+
 const int DINO_CLIPS[][4] = {
     {  0, 0, 75, 85},
     { 75, 0, 74, 85},
@@ -29,9 +45,8 @@ const int DINO_CLIPS[][4] = {
     {375, 0, 75, 85}};
 const int DINO_FRAMES = sizeof(DINO_CLIPS)/sizeof(int)/4;
 
-//Image enemy
+//IMAGE ENEMY
 #define enemy_image "image/enemy.png"
-#define enemySpeed 16
 const int ENEMY_CLIPS[][4] ={
     {564, 16, 77, 113},
     {438, 37, 107, 85},
@@ -42,7 +57,18 @@ const int ENEMY_CLIPS[][4] ={
     {4, 16, 72, 110}};
 const int ENEMY_FRAMES = sizeof(ENEMY_CLIPS)/sizeof(int)/4;
 
-//Sound and Music
+//IMAGE TRAP
+#define fireball_image "image/lighting.png"
+
+//SOUND AND MUSIC
 #define themeSong "sound\\theme.ogg"
+#define crash_sound "sound\\introSound.wav"
+#define press_sound "sound\\press.wav"
+#define laugh_sound "sound\\teemoLaugh.mp3"
+#define end_sound "sound\\end.mp3"
+
+//FONT AND TEXT
+#define font_file "image\\Pixel.ttf"
+#define color_font {100,255,100,150}
 
 #endif // GENERAL_H

@@ -2,7 +2,6 @@
 #define LTEXTURE_H
 
 #include "General.h"
-#include "Exception.h"
 
 struct Graphics {
     SDL_Renderer *renderer;
@@ -37,10 +36,10 @@ struct Graphics {
 
         //Initialize SDL_mixer
         if( Mix_OpenAudio( 44100, MIX_DEFAULT_FORMAT, 2, 2048 ) < 0 ) {
-           logErrorAndExit( "SDL_mixer could not initialize! SDL_mixer Error: %s\n",
-                            Mix_GetError() );
+            std::cerr<<"SDL_mixer could not initialize! SDL_mixer Error: %s\n"<<Mix_GetError()<<std::endl;
+            return;
         }
-
+        TTF_Init();
     }
 
 	void prepareScene(SDL_Texture * background)
@@ -76,6 +75,7 @@ struct Graphics {
         SDL_RenderCopy(renderer, texture, NULL, &dest);
     }
 
+
     void blitRect(SDL_Texture *texture, SDL_Rect *src, int x, int y)
     {
         SDL_Rect dest;
@@ -91,6 +91,7 @@ struct Graphics {
     void quit()
     {
         Mix_Quit();
+        TTF_Quit();
         IMG_Quit();
 
         SDL_DestroyRenderer(renderer);
@@ -98,27 +99,7 @@ struct Graphics {
         SDL_Quit();
     }
 
-    Mix_Music *loadMusic(const char* path)
-    {
-        Mix_Music *gMusic = Mix_LoadMUS(path);
-        if (gMusic == nullptr) {
-            SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION,
-                           SDL_LOG_PRIORITY_ERROR,
-                "Could not load music! SDL_mixer Error: %s", Mix_GetError());
-        }
-        return gMusic;
-    }
-    void play(Mix_Music *gMusic)
-    {
-        if (gMusic == nullptr) return;
 
-        if (Mix_PlayingMusic() == 0) {
-            Mix_PlayMusic( gMusic, -1 );
-        }
-        else if( Mix_PausedMusic() == 1 ) {
-            Mix_ResumeMusic();
-        }
-    }
 
 
 };

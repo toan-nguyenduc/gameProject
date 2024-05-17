@@ -1,67 +1,51 @@
 #include<iostream>
+#include<ctime>
 
 #include "General.h"
 #include "LTexture.h"
 #include "Background.h"
-#include "Player.h"
-#include "Enemy.h"
-#include "Entity.h"
+#include "Music.h"
+#include "Gameplay.h"
 
-using namespace std;
 
 int main(int argc, char *argv[])
 {
+    srand(time(0));
     //DO hoa
     Graphics graphics;
     graphics.init();
 
-    Mix_Music *gMusic = graphics.loadMusic(themeSong);
-    graphics.play(gMusic);
-
-
-
-    SDL_Texture* background=graphics.loadTexture(background_image);
-
     //Background troi
-    ScrollingBackground bgr;
-    bgr.setTexture(graphics.loadTexture(ground_image));
+    SDL_Texture* background=graphics.loadTexture(background_image);
+    Ground ground;
+    ground.setTexture(graphics.loadTexture(ground_image));
 
-    //Nhan vat chuyen dong
-    Player dino;
-    dino.init(graphics);
+    SDL_Texture* outro1=graphics.loadTexture(outro1_image);
 
-    //Enemy
-    Enemy teemo;
-    teemo.init(graphics);
+    Intro intro;
+    intro.init(graphics);
+    Mix_Chunk* gChunk=Mix_LoadWAV("sound\\teemoLaugh");
+    SDL_Texture* menu=graphics.loadTexture(menu_image);
 
-    //Collision
-    Entity collision;
-
-    bool quitGame = false;
-    SDL_Event event;
+    Gameplay game;
+    bool quitGame=false;
     while(!quitGame){
-        while(SDL_PollEvent(&event) != 0){
-            if(event.key.keysym.sym == SDLK_TAB) quitGame=true;
-
-            else if(event.key.keysym.sym == SDLK_ESCAPE) system("pause");
-        }
-        graphics.prepareScene(background);
-        dino.tick();
-        teemo.tick();
-        bgr.scroll(bgrSpeed);
-        bgr.render(bgr, graphics);
-        teemo.spawnEnemies(graphics);
-        dino.render(graphics);
-        graphics.presentScene();
-        if(collision.CheckCollision(dino,teemo)){
-            cerr<<"Ouch"<<endl;
-        };
-		SDL_Delay(20);
+        game.introGame(graphics, ground, intro, background, gChunk);
+        game.playingGame(graphics, ground,background);
+        game.endGame(quitGame, graphics, ground, background, menu);
+        outEnding=false;
     }
+    graphics.prepareScene(outro1);
+    graphics.presentScene();
+    Mix_Music* end=Mix_LoadMUS(end_sound);
+    Mix_PlayMusic(end,1);
+    while(Mix_PlayingMusic()){}
+    Mix_FreeMusic(end);
 
-    if (gMusic != nullptr) Mix_FreeMusic( gMusic );
-    SDL_DestroyTexture(bgr.texture);
-
+    SDL_DestroyTexture(background);
+    SDL_DestroyTexture(outro1);
+    ground.free();
+    intro.free();
     graphics.quit();
-
+    return 0;
 }

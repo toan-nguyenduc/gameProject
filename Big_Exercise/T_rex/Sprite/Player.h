@@ -5,13 +5,11 @@
 #include "General.h"
 #include "LTexture.h"
 
-
 struct Player {
-    SDL_Texture* texture;
+    SDL_Texture* texture=nullptr;
     std::vector<SDL_Rect> clips;
-
     int currentFrame = 0;
-    int animationSpeed = dinoSpeed;
+    int dinoSpeed = 80;
     int x=100;
     int y=500;
     int highJump=200;
@@ -33,10 +31,12 @@ struct Player {
     }
     void tick() {
         //Animation speed
-        currentFrame = (SDL_GetTicks()/ animationSpeed) % 4;
-        //currentFrame = (currentFrame +1) % clips.size();
+        currentFrame = (SDL_GetTicks()/ dinoSpeed) % 4;
+        if(SDL_GetTicks()/1000 - score == vel and dinoSpeed > 60){
+            dinoSpeed-=5;
+        }
         //Move
-         const Uint8* currentKeyStates = SDL_GetKeyboardState(NULL);
+         const Uint8* currentKeyStates=SDL_GetKeyboardState(NULL);
          if(currentKeyStates[SDL_SCANCODE_LEFT]){
             if(x>0){
                 x-=20;
@@ -47,7 +47,7 @@ struct Player {
                 x+=20;
             }
          }
-         else if(currentKeyStates[SDL_SCANCODE_UP] or currentKeyStates[SDL_SCANCODE_SPACE]){
+         else if(currentKeyStates[SDL_SCANCODE_UP]){
             if(!isJumping){
                 isJumping=true;
                 inAir=true;
@@ -81,9 +81,21 @@ struct Player {
         SDL_Rect renderQuad = {x, y, clip->w, clip->h};
         SDL_RenderCopy(graphics.renderer,texture, clip, &renderQuad);
     }
+    //Ham reset
+    void reset(){
+        currentFrame = 0;
+        dinoSpeed = 80;
+        x=100;
+        y=500;
+        highJump=200;
+        onGround=500;
+        isJumping = false;
+        inAir = false;
+    }
     //Ham huy
     void free(){
         SDL_DestroyTexture(texture);
+        texture=nullptr;
     }
 };
 
