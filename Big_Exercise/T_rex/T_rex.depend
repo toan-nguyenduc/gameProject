@@ -17,7 +17,7 @@
 	<SDL_mixer.h>
 	<SDL_ttf.h>
 
-1715923440 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\main.cpp
+1715923968 source:c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\main.cpp
 	<iostream>
 	<ctime>
 	"General.h"
@@ -47,7 +47,7 @@
 
 1714577228 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\timer\timer.h
 
-1715923320 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphics\general.h
+1715943109 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\graphics\general.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
@@ -93,7 +93,7 @@
 	"LTexture.h"
 	"string"
 
-1715921800 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\gameplay\gameplay.h
+1715943252 c:\users\thant\onedrive\desktop\sdl2_setup\big_exercise\t_rex\gameplay\gameplay.h
 	"General.h"
 	"LTexture.h"
 	"Font.h"

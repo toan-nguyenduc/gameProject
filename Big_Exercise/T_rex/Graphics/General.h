@@ -14,6 +14,7 @@ const int SCREEN_HEIGHT =900;
 bool outIntro=false;
 bool outPLaying=false;
 bool outEnding=false;
+bool onMusic=true;
 int score=-1;
 int vel=10;
 #define WINDOW_TITLE "Dino Running"

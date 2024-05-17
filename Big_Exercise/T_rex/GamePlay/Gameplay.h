@@ -70,6 +70,16 @@ struct Gameplay{
         }
         Mix_PlayMusic(gMusic,-1);
         while(!outPLaying){
+            if(currentKeyStates[SDL_SCANCODE_M]){
+                if(onMusic==true){
+                    Mix_PauseMusic();
+                    onMusic=false;
+                }
+                else{
+                    Mix_ResumeMusic();
+                    onMusic=true;
+                }
+            }
             scoreText.initS(SDL_GetTicks()/1000-score,graphics,1200,50);
             std::cerr<<SDL_GetTicks()/1000-score<<std::endl;
             graphics.prepareScene(background);
@@ -124,6 +134,7 @@ struct Gameplay{
                     dino.reset();
                     teemo.reset();
                     ball.reset();
+                    onMusic=true;
                 }
             }
         }
